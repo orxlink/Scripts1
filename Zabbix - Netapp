@@ -1,0 +1,11 @@
+	Warning	Space 90 percent on {#SNMPVALUE}	{Netapp_New:VolSpacePercent[{#SNMPVALUE}].last(0)}>90 & {Netapp_New:VolSpacePercent[{#SNMPVALUE}].last(0)}<95	Enabled
+	High	Space 95 percent on {#SNMPVALUE}	{Netapp_New:VolSpacePercent[{#SNMPVALUE}].last(0)}>94	Enabled
+	Disaster	Volume Status On {#SNMPVALUE}	{Netapp_New:VolStatus[{#SNMPVALUE}].prev(0)}#2	Enabled
+	
+	
+	-
+	
+	Alarme Warn somente quando % de espaço em uso maior que 90 e menor que 95.
+	Alarme High somente quando % de uso maior que 94.
+	
+	Assim, temos apenas uma trigger alarmando, ao invez de duas, quando a % é maior que 94.
